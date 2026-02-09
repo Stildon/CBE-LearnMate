@@ -1,0 +1,32 @@
+.math-module-page {
+    padding-bottom: 100px;
+}
+
+.math-badge {
+    background: #FF6B6B;
+}
+
+.math-progress {
+    background: linear-gradient(90deg, #FF6B6B, #FFB347);
+}
+
+.math-lesson {
+    border-color: transparent;
+}
+
+.math-lesson:hover:not(.locked) {
+    border-color: #FF6B6B;
+}
+
+.math-lesson.completed {
+    border-color: var(--color-success);
+    background: linear-gradient(135deg, white 0%, #FFF3E0 100%);
+}
+
+.math-number {
+    background: #FF6B6B;
+}
+
+.math-lesson:not(.locked):not(.completed) .lesson-status {
+    color: #FF6B6B;
+}

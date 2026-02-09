@@ -1,0 +1,55 @@
+.key-definition-box {
+    background: white;
+    border-left: 5px solid var(--def-color, #4FACFE);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: def-slide-in 0.4s ease-out;
+}
+
+@keyframes def-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.def-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.def-icon {
+    color: var(--def-color, #4FACFE);
+}
+
+.def-label {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--def-color, #4FACFE);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.def-term {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.def-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}

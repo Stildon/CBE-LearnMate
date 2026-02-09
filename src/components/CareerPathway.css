@@ -1,0 +1,118 @@
+.career-pathway-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.pathway-line {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    bottom: 80px;
+    width: 4px;
+    background: linear-gradient(180deg, var(--color-primary), var(--color-success), var(--color-secondary));
+    border-radius: 4px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.pathway-node {
+    position: relative;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+    border: 3px solid var(--node-color);
+    animation: slideIn 0.5s ease-out backwards;
+}
+
+.pathway-node:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.pathway-node:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.pathway-node:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pathway-number {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 32px;
+    height: 32px;
+    background: var(--node-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pathway-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.pathway-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.pathway-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.field-tag {
+    background: var(--bg-primary);
+    color: var(--text-main);
+    padding: 8px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 2px solid var(--node-color);
+}
+
+.pathway-arrow {
+    font-size: 32px;
+    color: var(--node-color);
+    margin-top: 12px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}

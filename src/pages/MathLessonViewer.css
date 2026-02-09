@@ -1,0 +1,347 @@
+.math-lesson-viewer {
+    /* Math-specific color overrides */
+}
+
+.math-indicator {
+    background: #FF6B6B;
+}
+
+.math-btn {
+    background: linear-gradient(135deg, #FF6B6B, #FFB347);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.math-inspiration {
+    background: linear-gradient(135deg, #FFF3E0, #FFEBEE);
+}
+
+/* Number displays */
+.example-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.number-badge {
+    background: linear-gradient(135deg, #FF6B6B, #FFB347);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Place Value */
+.place-value-demo {
+    margin: 24px 0;
+}
+
+.place-value-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.place-value-item {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #FF6B6B;
+}
+
+.place-value-item .digit {
+    display: block;
+    font-size: 36px;
+    font-weight: 900;
+    color: #FF6B6B;
+    margin-bottom: 8px;
+}
+
+.place-value-item .place {
+    display: block;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.place-value-item .value {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+/* Rounding */
+.rounding-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.rounding-card {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.original-number,
+.rounded-number {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text-main);
+}
+
+.round-arrow {
+    font-size: 32px;
+    color: #FF6B6B;
+}
+
+.round-label {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Even/Odd */
+.number-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.number-group {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.number-group h4 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.even-group {
+    border: 3px solid #4FACFE;
+}
+
+.even-group h4 {
+    color: #4FACFE;
+}
+
+.odd-group {
+    border: 3px solid #FFB347;
+}
+
+.odd-group h4 {
+    color: #FFB347;
+}
+
+.number-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.number-chip {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    color: white;
+}
+
+.number-chip.even {
+    background: #4FACFE;
+}
+
+.number-chip.odd {
+    background: #FFB347;
+}
+
+/* Prime Numbers */
+.prime-showcase {
+    margin: 24px 0;
+}
+
+.prime-showcase h4 {
+    margin-bottom: 16px;
+    color: #9B59B6;
+}
+
+.prime-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.prime-number {
+    background: linear-gradient(135deg, #9B59B6, #E91E63);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(155, 89, 182, 0.3);
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Operations */
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.operation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 3px solid #FFB347;
+}
+
+.op-symbol {
+    font-size: 48px;
+    font-weight: 900;
+    color: #FF6B6B;
+    margin-bottom: 8px;
+}
+
+.op-name {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.op-example {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-family: 'Courier New', monospace;
+}
+
+/* Sequences */
+.sequence-showcase {
+    margin: 24px 0;
+}
+
+.sequence-example {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 24px;
+    border: 3px solid #2ECC71;
+}
+
+.sequence-numbers {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.sequence-numbers span {
+    background: #2ECC71;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 900;
+    min-width: 60px;
+    text-align: center;
+}
+
+.sequence-numbers .next {
+    background: #FFB347;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.sequence-rule {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2ECC71;
+    margin-bottom: 12px;
+}
+
+.sequence-answer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Examples Box */
+.examples-box {
+    background: #E3F2FD;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.examples-box h4 {
+    color: #4FACFE;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.examples-box ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.examples-box li {
+    margin-bottom: 8px;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .number-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .operations-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .place-value-box {
+        grid-template-columns: 1fr 1fr;
+    }
+}

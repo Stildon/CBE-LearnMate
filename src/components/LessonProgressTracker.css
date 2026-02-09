@@ -1,0 +1,119 @@
+.lesson-progress-tracker {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.progress-percentage {
+    font-size: 18px;
+    font-weight: 900;
+    color: #4FACFE;
+}
+
+.progress-bar-container {
+    height: 8px;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4FACFE, #00F2FE);
+    border-radius: 10px;
+    transition: width 0.5s ease-out;
+    animation: progress-glow 2s infinite ease-in-out;
+}
+
+@keyframes progress-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(79, 172, 254, 0.8);
+    }
+}
+
+.progress-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active {
+    background: rgba(79, 172, 254, 0.1);
+}
+
+.step-icon {
+    color: #CCCCCC;
+    flex-shrink: 0;
+}
+
+.completed-icon {
+    color: #2ECC71;
+    animation: check-bounce 0.5s ease-out;
+}
+
+@keyframes check-bounce {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.progress-step.completed .step-label {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.progress-step.active .step-label {
+    color: #4FACFE;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    .progress-steps {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,102 @@
+.did-you-know-box {
+    background: linear-gradient(135deg, #FFF9E6, #FFE5B4);
+    border-left: 4px solid #FFB347;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(255, 179, 71, 0.2);
+    animation: dyk-entrance 0.5s ease-out;
+}
+
+@keyframes dyk-entrance {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.dyk-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.dyk-icon {
+    color: #FFB347;
+    animation: icon-glow 2s infinite ease-in-out;
+}
+
+@keyframes icon-glow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 2px #FFB347);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 8px #FFB347);
+    }
+}
+
+.dyk-title {
+    font-size: 16px;
+    font-weight: 900;
+    color: #FF6B6B;
+}
+
+.dyk-sparkle {
+    color: #FFD700;
+    animation: sparkle-twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes sparkle-twinkle {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+.dyk-content {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.dyk-emoji {
+    font-size: 32px;
+    flex-shrink: 0;
+    animation: emoji-float 3s infinite ease-in-out;
+}
+
+@keyframes emoji-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.dyk-fact {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}

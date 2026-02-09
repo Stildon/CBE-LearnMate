@@ -1,0 +1,475 @@
+.lessons-page {
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decorations */
+.lessons-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-star {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.15;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+.bg-star:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.bg-star:nth-child(2) {
+    top: 25%;
+    right: 8%;
+    animation-delay: 0.5s;
+}
+
+.bg-star:nth-child(3) {
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.bg-star:nth-child(4) {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+}
+
+/* Header Section */
+.lessons-header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 32px;
+}
+
+.mascot-guide {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.mascot-speech-bubble {
+    background: white;
+    border-radius: 20px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 280px;
+    animation: bubble-pop 0.5s ease-out;
+}
+
+.mascot-speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+}
+
+.mascot-speech-bubble p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+@keyframes bubble-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header-content {
+    text-align: center;
+}
+
+.lessons-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.title-icon {
+    color: #FFB347;
+    animation: sparkle-rotate 3s infinite ease-in-out;
+}
+
+@keyframes sparkle-rotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+.lessons-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Subject Cards Grid */
+.subjects-grid-enhanced {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 32px;
+}
+
+.subject-card-enhanced {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: card-entrance 0.6s ease-out backwards;
+}
+
+@keyframes card-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.subject-card-enhanced:hover .card-gradient-bg {
+    opacity: 0.2;
+}
+
+.subject-card-enhanced:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card-enhanced:active {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.subject-card-enhanced.coming-soon {
+    opacity: 0.85;
+}
+
+.subject-card-enhanced.coming-soon:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #FFB347, #FF6B6B);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    animation: badge-pulse 2s infinite;
+}
+
+@keyframes badge-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Icon Container */
+.subject-icon-container {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.subject-card-enhanced:hover .icon-circle {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.emoji-decoration {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 28px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    animation: emoji-bounce 2s infinite ease-in-out;
+}
+
+@keyframes emoji-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Subject Info */
+.subject-info {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.subject-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.subject-description {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Card Arrow */
+.card-arrow {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text-secondary);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.subject-card-enhanced:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Sparkle Effects */
+.card-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subject-card-enhanced:hover .card-sparkles {
+    opacity: 1;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 16px;
+    animation: sparkle-float 2s infinite ease-in-out;
+}
+
+.sparkle:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+    top: 30%;
+    right: 20%;
+    animation-delay: 0.5s;
+}
+
+@keyframes sparkle-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Encouragement Section */
+.encouragement-section {
+    position: relative;
+    z-index: 1;
+}
+
+.encouragement-card {
+    background: linear-gradient(135deg, #E8F5E9, #E3F2FD);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: card-entrance 0.6s ease-out 0.4s backwards;
+}
+
+.encouragement-icon {
+    font-size: 40px;
+    flex-shrink: 0;
+    animation: icon-wiggle 3s infinite ease-in-out;
+}
+
+@keyframes icon-wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+.encouragement-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .subjects-grid-enhanced {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .lessons-title {
+        font-size: 26px;
+    }
+
+    .mascot-guide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mascot-speech-bubble {
+        max-width: 100%;
+    }
+
+    .mascot-speech-bubble::before {
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+        border-top: none;
+    }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .subject-title {
+        font-size: 18px;
+    }
+}
